@@ -1,5 +1,13 @@
 # CSS Design Tokens
 
+## Quick Start
+
+1. Install the skill in your project (see [main repo README](https://github.com/schalkneethling/webdev-agent-skills))
+2. Import `tokens.css` in your main stylesheet or HTML
+3. Start using tokens: `var(--color-primary)`, `var(--size-16)`, etc.
+
+For the philosophy and detailed usage, read on below.
+
 ## Philosophy
 
 This token system embodies several key principles:
@@ -104,6 +112,24 @@ Both spacing and typography use consistent scales:
 }
 ```
 
+## Customization Guide
+
+### When to Keep as-is
+
+- Working on a prototype or MVP
+- Building internal tools where brand consistency isn't critical
+- Learning design systems
+- Quick experiments or proof-of-concepts
+
+### When to Customize
+
+- Matching specific brand guidelines
+- Projects with unique visual requirements
+- Integrating with existing design systems
+- Production applications with defined visual identity
+
+**Remember**: The token _structure_ (semantic naming, scale consistency, system thinking) is more valuable than the specific values. Customize the values to fit your needs, but maintain the systematic approach.
+
 ## Extending the System
 
 These tokens provide a foundation. Projects can:
@@ -111,5 +137,16 @@ These tokens provide a foundation. Projects can:
 - Add component-specific tokens that reference these base tokens
 - Create semantic aliases (e.g., `--button-bg: var(--color-primary)`)
 - Extend the color palette while maintaining the `oklch()` approach
+- Add new token categories (shadows, animations, grid systems, etc.)
 
 The key is maintaining the system's consistency and semantic approach.
+
+## Browser Support
+
+The `oklch()` color space is supported in:
+
+- Chrome/Edge 111+
+- Safari 15.4+
+- Firefox 113+
+
+For older browsers, consider using a PostCSS plugin to generate fallback colors, or use this as a progressive enhancement where supported browsers get optimal color fidelity.
