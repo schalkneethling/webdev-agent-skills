@@ -12,18 +12,23 @@ Agent Skills are specialized knowledge packages that extend AI coding agents' ca
 ## Available Skills
 
 ### component-scaffolding
+
 Generates component skeletons for Drupal/Twig projects with web components and Miyagi validation. Includes JSON schema and mock data patterns.
 
 ### component-usage-analysis
+
 Analyzes component dependencies and usage patterns. Provides search patterns for finding usage, checking removal safety, and auditing dependencies.
 
-### css-base-tokens
+### css-tokens
+
 Provides a foundational set of CSS custom property tokens for design systems. Includes spacing, typography, color, and layout tokens that serve as a starting point for new projects and can be customized per project.
 
 ### css-coder
+
 CSS authoring guidance emphasizing web standards, accessibility, and performance. Includes patterns for modern CSS syntax, logical properties, and responsive design.
 
 ### semantic-html
+
 Guidance for well-considered semantic HTML. Emphasizes native HTML elements over ARIA, proper document structure, and accessibility foundations.
 
 ## Installation
@@ -39,16 +44,19 @@ Install each skill to: .claude/skills/[skill-name] in the current project root
 ```
 
 **Note**:
+
 - Replace the skill names with the ones you need. You can install all skills or select specific ones.
 - The parent directory is `.claude` by convention, but you can use a different name depending on your agent or IDE (e.g., `.ai`, `.agent`, etc.)
 
 ### Version Control
 
 **To commit customized skills with your project:**
+
 - Keep `.claude/skills/` in version control
 - Your team will get the skills when they clone the repo
 
 **To keep skills out of version control:**
+
 - Add `.claude/skills/` to your `.gitignore`
 - Team members install skills individually
 
@@ -77,6 +85,7 @@ The script reads skills from `.claude/skills/` and converts them to `.cursor/rul
 ```
 
 This will:
+
 - Read all `SKILL.md` files and reference docs from `.claude/skills/*/`
 - Convert them to Cursor's `.mdc` format
 - Write them to `.cursor/rules/*.mdc`
@@ -97,6 +106,7 @@ Contributions are welcome! To add a new skill:
 1. **Fork this repository**
 
 2. **Create a skill directory** with this structure:
+
    ```
    your-skill-name/
    ├── SKILL.md          # Main skill instructions
@@ -119,7 +129,7 @@ Contributions are welcome! To add a new skill:
 ### Skill Guidelines
 
 - **Focus on reusability**: Skills should be useful across multiple projects
-- **Provide context**: Explain *why* not just *what*
+- **Provide context**: Explain _why_ not just _what_
 - **Include examples**: Show practical applications
 - **Keep it focused**: One clear domain per skill
 - **Web standards first**: Emphasize platform features over framework-specific solutions
