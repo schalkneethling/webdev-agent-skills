@@ -1,6 +1,6 @@
 # Web Development Agent Skills
 
-A curated collection of Agent Skills for web development projects, focusing on web standards, semantic HTML, accessibility, and modern CSS practices.
+A curated collection of Agent Skills for web development projects, focusing on web standards, semantic HTML, accessibility, security, and modern CSS practices.
 
 ## What Are Agent Skills?
 
@@ -27,6 +27,10 @@ Provides a foundational set of CSS custom property tokens for design systems. In
 
 CSS authoring guidance emphasizing web standards, accessibility, and performance. Includes patterns for modern CSS syntax, logical properties, and responsive design.
 
+### frontend-security
+
+Comprehensive security audit capability for frontend codebases. Identifies XSS, CSRF, DOM vulnerabilities, CSP misconfigurations, and dependency issues. Supports React, Astro, Twig, Node.js, and vanilla web platform. Based on OWASP security guidelines with detailed reference documentation for common vulnerability patterns.
+
 ### semantic-html
 
 Guidance for well-considered semantic HTML. Emphasizes native HTML elements over ARIA, proper document structure, and accessibility foundations.
@@ -38,7 +42,7 @@ Copy this prompt to install skills in your current project:
 ```
 Please install Agent Skills from https://github.com/schalkneethling/webdev-agent-skills
 
-Skills to install: css-base-tokens, css-coder, semantic-html
+Skills to install: css-base-tokens, css-coder, semantic-html, frontend-security
 
 Install each skill to: .claude/skills/[skill-name] in the current project root
 ```
