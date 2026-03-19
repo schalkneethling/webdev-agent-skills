@@ -69,7 +69,7 @@ What is this section's purpose?
 ├─ Site/section footer → <footer>
 ├─ Navigation → <nav> (must be labelled)
 ├─ Primary page content → <main>
-├─ Search functionality → <search> (the form, not results)
+├─ Search/filter functionality → <search> (wrap ALL related controls, not just the text input)
 ├─ User input → <form> (must be labelled to be a landmark)
 ├─ Tangentially related → <aside>
 ├─ Self-contained content → <article>
@@ -80,8 +80,9 @@ What is this section's purpose?
 
 ```
 Do these fields form a logical/thematic group?
-├─ Yes → <fieldset> with <legend>
-│        Examples: address fields, personal info, consent checkboxes
+├─ Yes → Are they form controls (inputs, selects, checkboxes)?
+│        ├─ Yes → <fieldset> with <legend>
+│        └─ No → <section aria-labelledby="...">
 └─ No → Is visual grouping needed?
         ├─ Yes → <div> with appropriate styling
         └─ No → Fields can exist without wrapper
@@ -91,9 +92,20 @@ Do these fields form a logical/thematic group?
 
 ```
 Should content be expandable/collapsible?
-├─ Yes → Is it a single content section?
-│        ├─ Yes → <details>/<summary>
-│        └─ No → Consider tab pattern or custom disclosure
+├─ Yes → Does the disclosed content need ARIA roles (menu, dialog, etc.)?
+│        ├─ Yes → <button> controlling visibility + appropriate ARIA
+│        └─ No → Is it a single content section?
+│                ├─ Yes → <details>/<summary>
+│                └─ No → Consider tab pattern or custom disclosure
 └─ No → Is it a list of definitions?
         └─ Yes → <dl> (not details/summary)
+```
+
+## Skip Navigation
+
+```
+Does the page have a <nav> or repeated content before <main>?
+└─ Yes → Add <a href="#main-content"> as the first element in <body>
+         Does the page have a prominent search bar or long sidebar?
+         └─ Yes → Add additional skip links to those targets
 ```
