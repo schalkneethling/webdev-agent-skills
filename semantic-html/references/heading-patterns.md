@@ -81,7 +81,7 @@ function CardList({ cards }) {
 ### When to Use
 
 - Known parent-child component relationships
-- Design system with predictable nesting patterns
+- Design systems with predictable nesting patterns
 - When you control both container and child components
 
 ### Trade-offs
