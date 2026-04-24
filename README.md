@@ -1,5 +1,7 @@
 # Web Development Agent Skills
 
+> **NOTE:** These have been moved to [https://github.com/schalkneethling/claude-toolkit](https://github.com/schalkneethling/claude-toolkit)
+
 A curated collection of Agent Skills for web development projects, focusing on web standards, semantic HTML, accessibility, security, and modern CSS practices.
 
 ## What Are Agent Skills?
